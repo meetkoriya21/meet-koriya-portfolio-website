@@ -1,23 +1,23 @@
-﻿import { defineConfig } from "@tanstack/react-start/config";
+﻿import { defineConfig } from "vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { nitro } from "nitro/vite";
+import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   server: {
-    preset: "vercel",
+    port: 5173,
   },
-  tsr: {
-    appDirectory: "src",
-  },
-  vite: {
-    server: {
-      port: 5173,
-    },
-    plugins: [
-      tailwindcss(),
-      viteTsConfigPaths({
-        projects: ["./tsconfig.json"],
-      }),
-    ],
-  },
+  plugins: [
+    viteTsConfigPaths({
+      projects: ["./tsconfig.json"],
+    }),
+    tailwindcss(),
+    tanstackStart(),
+    nitro({
+      preset: "vercel",
+    }),
+    viteReact(),
+  ],
 });
