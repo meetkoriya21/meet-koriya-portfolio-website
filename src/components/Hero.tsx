@@ -35,6 +35,53 @@ export function Hero() {
       <div className="absolute left-1/2 top-0 -z-10 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-gradient-radial blur-3xl" />
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.2fr_1fr]">
+        {/* ── Photo: shown on mobile (above text) + desktop (right column) ── */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative mx-auto aspect-square w-full max-w-[260px] sm:max-w-sm lg:order-last lg:max-w-md"
+        >
+          {/* Glow Background */}
+          <div className="absolute -inset-6 rounded-full bg-gradient-brand opacity-20 blur-3xl spin-slow" />
+
+          {/* Professional Photo Container */}
+          <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 ring-glow float shadow-elegant">
+            <img
+              src="/images/profile-professional.jpg"
+              alt="Meet Koriya - Professional Portrait"
+              width={768}
+              height={768}
+              className="h-full w-full object-cover object-center"
+              loading="eager"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+          </div>
+
+          {/* Status Badges — hidden on small mobile to avoid overflow */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="absolute -bottom-4 -left-4 hidden sm:block rounded-2xl glass-strong px-4 py-3 shadow-elegant backdrop-blur border border-white/10"
+          >
+            <div className="text-xs text-muted-foreground uppercase tracking-wide font-medium">Currently building</div>
+            <div className="font-display text-sm font-semibold">Full-stack apps ⚡</div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="absolute -right-4 top-8 hidden sm:block rounded-2xl glass-strong px-4 py-3 shadow-elegant backdrop-blur border border-white/10"
+          >
+            <div className="text-xs text-muted-foreground uppercase tracking-wide font-medium">Based in</div>
+            <div className="font-display text-sm font-semibold">India 🇮🇳</div>
+          </motion.div>
+        </motion.div>
+
+        {/* ── Text content ── */}
         <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
@@ -102,50 +149,6 @@ export function Hero() {
             ))}
           </motion.div>
         </div>
-
-        {/* PROFESSIONAL PHOTO SECTION */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mx-auto hidden aspect-square w-full max-w-md lg:block"
-        >
-          {/* Glow Background */}
-          <div className="absolute -inset-6 rounded-full bg-gradient-brand opacity-20 blur-3xl spin-slow" />
-          
-          {/* Professional Photo Container */}
-          <div className="relative aspect-square overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 ring-glow float shadow-elegant">
-            <img 
-              src="/images/profile-professional.jpg" 
-              alt="Meet Koriya - Professional Portrait" 
-              width={768} 
-              height={768} 
-              className="h-full w-full object-cover object-center"
-              loading="lazy"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-          </div>
-          
-          {/* Status Badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute -bottom-4 -left-4 rounded-2xl glass-strong px-4 py-3 shadow-elegant backdrop-blur border border-white/10"
-          >
-            <div className="text-xs text-muted-foreground uppercase tracking-wide font-medium">Currently building</div>
-            <div className="font-display text-sm font-semibold">Full-stack apps ⚡</div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="absolute -right-4 top-8 rounded-2xl glass-strong px-4 py-3 shadow-elegant backdrop-blur border border-white/10"
-          >
-            <div className="text-xs text-muted-foreground uppercase tracking-wide font-medium">Based in</div>
-            <div className="font-display text-sm font-semibold">India 🇮🇳</div>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );
