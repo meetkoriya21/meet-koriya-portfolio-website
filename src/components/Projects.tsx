@@ -21,16 +21,7 @@ const projects: Project[] = [
     category: "Web",
     gradient: "from-blue-500 to-violet-500",
     github: "#",
-    live: "#",
-  },
-  {
-    title: "Institute Management Dashboard",
-    desc: "Power BI dashboard tracking student, faculty and academic KPIs across departments.",
-    tech: ["Power BI", "SQL Server", "DAX"],
-    category: "Dashboard",
-    gradient: "from-violet-500 to-fuchsia-500",
-    github: "#",
-    live: "#",
+    live: "https://smart-campus-issue-tracker.vercel.app/",
   },
   {
     title: "Sales Insights Dashboard",
@@ -48,7 +39,16 @@ const projects: Project[] = [
     category: "Web",
     gradient: "from-blue-500 to-cyan-500",
     github: "#",
-    live: "#",
+    live: "https://doctor-appointment-booking-system-1-wybj.onrender.com/",
+  },
+  {
+    title: "Blog Application",
+    desc: "Authentication-based CRUD blog platform for active users with optimized API performance to improve response time and application usability.",
+    tech: ["MongoDB", "Express.js", "React", "Node.js"],
+    category: "Web",
+    gradient: "from-emerald-500 to-teal-500",
+    github: "#",
+    live: "https://blog-website-2-61oz.onrender.com/",
   },
 ];
 
