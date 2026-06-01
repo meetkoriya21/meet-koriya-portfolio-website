@@ -4,9 +4,9 @@ import { Reveal } from "./Reveal";
 const items = [
   {
     Icon: GraduationCap,
-    title: "B.E. Computer Engineering",
+    title: "B.Tech Computer Engineering",
     org: "University · Ongoing",
-    desc: "Pursuing Bachelor of Engineering in Computer Engineering with strong focus on full-stack development, database management, and cloud technologies.",
+    desc: "Pursuing Bachelor of Technology in Computer Engineering with strong focus on full-stack development, database management, and cloud technologies.",
     year: "2024-Present",
   },
   {
@@ -126,7 +126,7 @@ export function Experience() {
             {[
               {
                 label: "Current Status",
-                value: "B.E. Student",
+                value: "B.Tech Student",
                 desc: "Computer Engineering",
               },
               {

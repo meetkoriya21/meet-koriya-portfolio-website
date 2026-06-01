@@ -13,7 +13,7 @@ type Project = {
   live: string;
 };
 
-const projects: Project[] = [
+export const projects: Project[] = [
   {
     title: "Civic Management System",
     desc: "Citizen-issue reporting & resolution platform with role-based dashboards and analytics.",
@@ -22,15 +22,6 @@ const projects: Project[] = [
     gradient: "from-blue-500 to-violet-500",
     github: "#",
     live: "https://smart-campus-issue-tracker.vercel.app/",
-  },
-  {
-    title: "Sales Insights Dashboard",
-    desc: "Interactive Power BI report with KPIs, trends, and drill-through customer analysis.",
-    tech: ["Power BI", "MySQL"],
-    category: "Dashboard",
-    gradient: "from-indigo-500 to-purple-500",
-    github: "#",
-    live: "#",
   },
   {
     title: "Doctor Appointment Booking System",

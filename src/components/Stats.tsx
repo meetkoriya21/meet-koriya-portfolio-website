@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { Reveal } from "./Reveal";
+import { projects } from "./Projects";
+import { groups } from "./Skills";
+
+const totalSkills = groups.reduce((acc, g) => acc + g.skills.length, 0);
 
 const stats = [
-  { value: 15, suffix: "+", label: "Projects completed" },
-  { value: 12, suffix: "+", label: "Technologies learned" },
+  { value: projects.length, suffix: "+", label: "Projects completed" },
+  { value: totalSkills, suffix: "+", label: "Technologies learned" },
   { value: 200, suffix: "+", label: "GitHub contributions" },
-  { value: 5, suffix: "", label: "Certifications" },
+  { value: 6, suffix: "", label: "Certifications" },
 ];
 
 function Counter({ to, suffix }: { to: number; suffix: string }) {

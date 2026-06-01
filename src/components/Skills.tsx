@@ -1,55 +1,55 @@
 import { motion } from "framer-motion";
 import { Reveal } from "./Reveal";
 
-const groups = [
+export const groups = [
   {
     title: "Languages",
     skills: [
-      { name: "Python", level: 88 },
-      { name: "JavaScript", level: 85 },
-      { name: "C++", level: 80 },
-      { name: "Java", level: 82 },
+      { name: "Python", level: 70 },
+      { name: "JavaScript", level: 74 },
+      { name: "C++", level: 60 },
+      { name: "Java", level: 62 },
     ],
   },
   {
     title: "Frontend",
     skills: [
-      { name: "React", level: 90 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "HTML", level: 95 },
-      { name: "CSS", level: 90 },
+      { name: "React", level: 76 },
+      { name: "Tailwind CSS", level: 78 },
+      { name: "HTML", level: 80 },
+      { name: "CSS", level: 72 },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express.js", level: 82 },
+      { name: "Node.js", level: 68 },
+      { name: "Express.js", level: 64 },
     ],
   },
   {
     title: "Databases",
     skills: [
-      { name: "MongoDB", level: 85 },
-      { name: "MySQL", level: 88 },
-      { name: "DynamoDB", level: 78 },
+      { name: "MongoDB", level: 68 },
+      { name: "MySQL", level: 72 },
+      { name: "DynamoDB", level: 55 },
     ],
   },
   {
     title: "Cloud & Tools",
     skills: [
-      { name: "AWS (EC2, S3, Lambda)", level: 82 },
-      { name: "API Gateway", level: 80 },
-      { name: "Postman", level: 88 },
-      { name: "Git", level: 90 },
+      { name: "AWS (EC2, S3, Lambda)", level: 60 },
+      { name: "API Gateway", level: 58 },
+      { name: "Postman", level: 70 },
+      { name: "Git", level: 75 },
     ],
   },
   {
     title: "Developer Tools",
     skills: [
-      { name: "Power BI", level: 90 },
-      { name: "VS Code", level: 95 },
-      { name: "GitHub", level: 92 },
+      { name: "Power BI", level: 72 },
+      { name: "VS Code", level: 80 },
+      { name: "GitHub", level: 75 },
     ],
   },
 ];
